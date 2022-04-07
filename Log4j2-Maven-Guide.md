@@ -7,16 +7,16 @@ In the **pom.xml** file of your project, delete/comment every other possible dep
 Now add the log4j2 dependiencies in the **pom.xml** file of your project. If your project consists of multiple modules, adding these dependencies to the most external project's pom.xml file should be enough.
 In the dependencies section of the pom add:
 
-		&lt;dependency&gt;
-			&lt;groupId&gt;org.apache.logging.log4j&lt;/groupId&gt;
-			&lt;artifactId&gt;log4j-api&lt;/artifactId&gt;
-			&lt;version&gt;2.17.2&lt;/version&gt;
-		&lt;/dependency&gt;
-		&lt;dependency&gt;
-			&lt;groupId&gt;org.apache.logging.log4j&lt;/groupId&gt;
-			&lt;artifactId&gt;log4j-core&lt;/artifactId&gt;
-			&lt;version&gt;2.17.2&lt;/version&gt;
-		&lt;/dependency&gt;
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>2.17.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.17.2</version>
+		</dependency>
 You can always check the dependencies or the latest version to use here: https://logging.apache.org/log4j/2.x/maven-artifacts.html#Using_Log4j_in_your_Apache_Maven_build
 
 ## 2) Add the configuration file
@@ -26,18 +26,18 @@ This file must be named **log4j2.xml** and can be located anywhere in the applic
 ### Configuration file example
 Here is a simple example of **log4j2.xml** file. This simple configuration defines a simple appender used by the root logger to log on the console.
                    
-    &lt;Configuration status="warn"&gt;  
-		&lt;Appenders&gt;  
-			&lt;Console name="console" target="SYSTEM_OUT"&gt;  
-				&lt;PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n" /&gt;  
-			&lt;/Console&gt;  
-		&lt;/Appenders&gt;  
-		&lt;Loggers&gt;  
-			&lt;Root level="info" additivity="false"&gt;  			
-				&lt;AppenderRef ref="console" /&gt;
-			&lt;/Root&gt;  
-		&lt;/Loggers&gt;  
-    &lt;/Configuration&gt;
+    <Configuration status="warn">  
+		<Appenders>  
+			<Console name="console" target="SYSTEM_OUT">  
+				<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n" />  
+			</Console>  
+		</Appenders>  
+		<Loggers>  
+			<Root level="info" additivity="false">  			
+				<AppenderRef ref="console" />
+			</Root>  
+		</Loggers>  
+    </Configuration>
 
 You can find examples for more complex configurations (for example for logging on files), at this link:
 https://howtodoinjava.com/log4j2/log4j2-xml-configuration-example/
