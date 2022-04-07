@@ -25,7 +25,7 @@ So, in order to use SLF4J, the better option is to delete/comment any dependence
 		<artifactId>slf4j-api</artifactId>
 		<version>1.7.36</version>
 	</dependency>
-Please check https://mvnrepository.com/artifact/org.slf4j/slf4j-api to get the latest (stable or not, your choice) version.
+Please check https://mvnrepository.com/artifact/org.slf4j/slf4j-api to get the latest (stable or not, your call) version.
 
 This is more than enough to start using SLF4J  in your code.
 ## 2) Using SLF4J in your code
@@ -78,8 +78,8 @@ The positive thing about this is that it will be possible for the server adminis
 ## Defining a custom logging profile on JBoss
 All that is left is defining a custom logging profile for your application to use. Let's do this on the administration console, which, by default, can be found at http://127.0.0.1:9990 when JBoss is running.
 Open **CONFIGURATION-->Subsystems** and search for **logging**. Select **Logging profiles** and then click on the **+** in a circle (Add logging profile) to add a new profile. Provide a name and press **Add**. Then select on the newly created profile and press view.
-You should now see the profile configuration page. What you need to do now is defining on or more handlers to take care of your logs.
-Once you've defined one or more handlers, you can now go back and edit the Root Logger for this logging profile (or create a specific logger category), adding the handlers you just created to it. At this point, your application should log using the specific behavior defined by your custom logging profile.
+You should now see the profile configuration page. What you need to do now is defining one or more handlers to take care of your logs.
+Once you've defined one or more handlers, you can now go back and edit the Root Logger for this logging profile (or create a specific logger category), and add the handlers you just created to it. At this point, your application should log using the specific behavior defined by your custom logging profile.
 
 ## References
 * [Jboss Logging Guide](https://docs.jboss.org/hibernate/orm/current/topical/html_single/logging/Logging.html)
