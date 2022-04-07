@@ -80,3 +80,7 @@ All that is left is defining a custom logging profile for your application to us
 Open **CONFIGURATION-->Subsystems** and search for **logging**. Select **Logging profiles** and then click on the **+** in a circle (Add logging profile) to add a new profile. Provide a name and press **Add**. Then select on the newly created profile and press view.
 You should now see the profile configuration page. What you need to do now is defining on or more handlers to take care of your logs.
 Once you've defined one or more handlers, you can now go back and edit the Root Logger for this logging profile (or create a specific logger category), adding the handlers you just created to it. At this point, your application should log using the specific behavior defined by your custom logging profile.
+
+## References
+* [Jboss Logging Guide](https://docs.jboss.org/hibernate/orm/current/topical/html_single/logging/Logging.html)
+* [SLF4J Website](https://www.slf4j.org/)
