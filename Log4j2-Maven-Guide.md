@@ -2,7 +2,7 @@
 ---
 ## 1) Maven Dependencies
 ### Exclude other logging frameworks
-In the **pom.xml** file of your project, delete/comment every other possible dependency to other logging frameworks. This is because if a logging hierarchy is present on the server you're deploying you project on, there is a chance that another logging framework has a higher level in the hierarchy and will take over log4j2. 
+In the **pom.xml** file of your project, delete/comment every other possible dependency to other logging frameworks. This is because if a logging hierarchy is present on the server you're deploying your project on, there is a chance that another logging framework has a higher level in the hierarchy and will take over log4j2. 
 ### Add log4j2 dependencies
 Now add the log4j2 dependiencies in the **pom.xml** file of your project. If your project consists of multiple modules, adding these dependencies to the most external project's pom.xml file should be enough.
 In the dependencies section of the pom add:
@@ -20,7 +20,7 @@ In the dependencies section of the pom add:
 You can always check the dependencies or the latest version to use here: https://logging.apache.org/log4j/2.x/maven-artifacts.html#Using_Log4j_in_your_Apache_Maven_build
 
 ## 2) Add the configuration file
-Log4j2 needs a configuration file where you can specify how the logging framework has to behave when it's called.  
+Log4j2 needs a configuration file where you can specify how the logging framework behaves when it's used.  
 This file can be a **.properties** file or a **.xml** file. In this guide, we will see how to use the .xml file.
 This file must be named **log4j2.xml** and can be located anywhere in the application's classpath, even though is usually found in the **src/main/resources** . In a multi module project it's the same, but it needs to be inside the module building the entire project.
 ### Configuration file example
